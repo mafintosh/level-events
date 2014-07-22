@@ -1,0 +1,33 @@
+{
+  "name": "level-events",
+  "version": "0.0.0",
+  "description": "Get an event everytime something is written / read / deleted using levelup. In includes streams support as well.",
+  "main": "index.js",
+  "dependencies": {
+    "abstract-leveldown": "^0.12.3"
+  },
+  "devDependencies": {
+    "levelup": "^0.18.5",
+    "memdown": "^0.10.2",
+    "tape": "^2.13.4"
+  },
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mafintosh/level-events"
+  },
+  "keywords": [
+    "level",
+    "events",
+    "levelup",
+    "leveldb"
+  ],
+  "author": "Mathias Buus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/level-events/issues"
+  },
+  "homepage": "https://github.com/mafintosh/level-events"
+}
