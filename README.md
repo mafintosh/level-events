@@ -6,6 +6,9 @@ Get an event everytime something is written / read / deleted using levelup. In i
 npm install level-events
 ```
 
+[![build status](http://img.shields.io/travis/mafintosh/level-events.svg?style=flat)](http://travis-ci.org/mafintosh/level-events)
+![dat](http://img.shields.io/badge/Development%20sponsored%20by-dat-green.svg?style=flat)
+
 ## Usage
 
 ``` js
