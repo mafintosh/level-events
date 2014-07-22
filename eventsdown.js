@@ -29,7 +29,7 @@ var EventsDown = function(down, events) {
   if (!(this instanceof EventsDown)) return new EventsDown(down, events)
   this._down = down
   this._events = events
-  abstract.AbstractLevelDOWN.call(this, down.location)
+  abstract.AbstractLevelDOWN.call(this, down.location || 'no-location')
 }
 
 util.inherits(EventsDown, abstract.AbstractLevelDOWN)
