@@ -3,6 +3,10 @@ var abstract = require('abstract-leveldown')
 
 var noop = function() {}
 
+var notNumber = function(n) {
+  return typeof n === 'number' ? n.toString() : n
+}
+
 var EventsIterator = function(ite, events) {
   this._iterator = ite
   this._events = events
@@ -49,7 +53,7 @@ EventsDown.prototype.put = function(key, value, opts, cb) {
   var events = this._events
   this._down.put(key, value, opts, cb && function(err, val) {
     if (err) return cb(err)
-    events.emit('write', key, value)
+    events.emit('write', key, notNumber(value))
     cb(err, val)
   })
 }
@@ -90,7 +94,7 @@ EventsDown.prototype.batch = EventsDown.prototype._batch = function(operations, 
     for (var i = 0; i < operations.length; i++) {
       var o = operations[i]
       if (o.type === 'del') events.emit('delete', o.key)
-      if (o.type === 'put') events.emit('write', o.key, o.value)
+      if (o.type === 'put') events.emit('write', o.key, notNumber(o.value))
     }
     cb(err, value)
   })
