@@ -1,6 +1,6 @@
 {
   "name": "level-events",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get an event everytime something is written / read / deleted using levelup. In includes streams support as well.",
   "main": "index.js",
   "dependencies": {
