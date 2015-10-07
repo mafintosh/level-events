@@ -69,17 +69,6 @@ test('get event from streams', function(t) {
   })
 })
 
-test('put event from streams', function(t) {
-  var db = levelup('test', {db:down})
-  install(db).on('write', function(key) {
-    t.same(key, 'test')
-    t.end()
-  })
-  var ws = db.createWriteStream()
-  ws.write({key:'test', value:'test-value'})
-  ws.end()
-})
-
 test('batch', function(t) {
   t.plan(3)
   var db = levelup('test', {db:down})

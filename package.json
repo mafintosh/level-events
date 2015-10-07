@@ -4,12 +4,12 @@
   "description": "Get an event everytime something is written / read / deleted using levelup. In includes streams support as well.",
   "main": "index.js",
   "dependencies": {
-    "abstract-leveldown": "^0.12.3"
+    "abstract-leveldown": "^2.4.1"
   },
   "devDependencies": {
-    "levelup": "^0.18.5",
-    "memdown": "^0.10.2",
-    "tape": "^2.13.4"
+    "levelup": "^1.2.1",
+    "memdown": "^1.1.0",
+    "tape": "^4.2.1"
   },
   "scripts": {
     "test": "tape test/index.js"
